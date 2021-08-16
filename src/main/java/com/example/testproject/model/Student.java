@@ -1,7 +1,6 @@
 package com.example.testproject.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "students")
@@ -11,11 +10,9 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotBlank(message = "Name is mandatory")
     @Column(name = "name")
     private String name;
 
-    @NotBlank(message = "Email is mandatory")
     @Column(name = "email")
     private String email;
 
